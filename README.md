@@ -7,5 +7,5 @@ yarn add ts-node-dev -D
 yarn add eslint -D
 yarn eslint --init
 yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
-yarn add uuidv4
+yarn add uuid
 yarn add date-fns

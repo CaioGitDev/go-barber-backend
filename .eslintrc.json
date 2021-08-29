@@ -19,6 +19,7 @@
     ],
     "rules": {
       "camelcase": "off",
+      "linebreak-style":"off",
       "import/extensions": [
        "error",
        "ignorePackages",

@@ -5,13 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-chrome",
+      "type": "node",
       "request": "attach",
       "protocol": "inspector",
       "restart": true,
       "name": "Debug",
       "url": "http://localhost:3333",
-      "webRoot": "${workspaceFolder}"
     }
   ]
 }
