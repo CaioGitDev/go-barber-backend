@@ -10,3 +10,13 @@ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 yarn add uuid
 yarn add date-fns
 yarn add typeorm pg
+
+
+
+
+TYPEORM
+create migration
+  yarn typeorm migration:create -n CreateAppointments
+
+run migration
+yarn typeorm migration:run
