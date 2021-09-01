@@ -10,6 +10,7 @@ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 yarn add uuid
 yarn add date-fns
 yarn add typeorm pg
+yarn add reflect-metadata
 
 
 
