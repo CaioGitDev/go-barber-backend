@@ -11,6 +11,7 @@ yarn add uuid
 yarn add date-fns
 yarn add typeorm pg
 yarn add reflect-metadata
+yarn add bcryptjs
 
 
 
