@@ -13,6 +13,8 @@ yarn add typeorm pg
 yarn add reflect-metadata
 yarn add bcryptjs
 yarn add jsonwebtoken
+yarn add multer
+yarn add -D @types/multer
 
 
 
