@@ -10,9 +10,15 @@ const appointmentsRouter = Router();
 appointmentsRouter.use(ensureAuthenticated);
 
 appointmentsRouter.get('/', async (request, response) => {
-  const appointmentsRepository = getCustomRepository(AppointmentsRepository);
-  const appointments = await appointmentsRepository.find();
-  return response.json(appointments);
+  try {
+    const appointmentsRepository = getCustomRepository(AppointmentsRepository);
+    const appointments = await appointmentsRepository.find();
+    return response.json(appointments);
+  } catch (error) {
+    return response.status(400).json({
+      error: error.message,
+    });
+  }
 });
 
 appointmentsRouter.post('/', async (request, response) => {
