@@ -2,6 +2,7 @@ import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import { getRepository } from 'typeorm';
 import auth from '../config/auth';
+import AppError from '../errors/AppError';
 import User from '../models/User';
 
 interface RequestDTO {
@@ -24,13 +25,13 @@ class AuthenticationUserService {
     });
 
     if (!user) {
-      throw new Error(defaultErrorMessage);
+      throw new AppError(defaultErrorMessage, 401);
     }
 
     const passwordMatched = await compare(password, user.password);
 
     if (!passwordMatched) {
-      throw new Error(defaultErrorMessage);
+      throw new AppError(defaultErrorMessage, 401);
     }
 
     const { secret, expiresIn } = auth.jwt;
