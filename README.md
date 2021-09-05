@@ -15,6 +15,7 @@ yarn add bcryptjs
 yarn add jsonwebtoken
 yarn add multer
 yarn add -D @types/multer
+yarn add express-async-errors
 
 
 
